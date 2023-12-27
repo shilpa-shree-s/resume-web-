@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Ammu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/393af2f628.js" crossorigin="anonymous"></script>
+</head>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./img/logo.png" alt="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li> 
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="h-text">
+                <!-- <p>portfolio</p> -->
+                <h1>Hi, i'm <span>shilpa</span> shree <br>From Karnataka</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./img/ about.png" alt="">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">about me</h1>
+                    <p>Hey, I'm Shilpa Shree, a passionate Python developer . Life to me is a thrilling journey of constant growth and self-discovery.
+                        In the realm of coding, I weave magic with Python. Solving puzzles, crafting solutions, and embracing the challenges of the tech world is my forte. 
+                        Away from the screen, you'll find me soaking up inspiration from books, exploring the beauty of Karnataka, and fueling my curiosity with new tech trends
+                        Let's connect, code, and create something extraordinary together</p>                    
+                    <div class="tab-titles">
+                        <p><span class="tab-links active-link" onclick="opentab('skills')">skills</span></p>
+                        <p><span class="tab-links" onclick="opentab('experience')">experience</span></p>
+                        <p><span class="tab-links" onclick="opentab('education')">education</span></p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>front-end</span><br>Development Skills (HTML,CSS,JS)</li>
+                            <li><span>back-end</span><br>Development Skills (Python)</li>
+                            <li><span>database</span><br>Development Skills (Mariadb,Oracle)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <!-- <ul>
+                            <li><span>2023-2025</span><br>front-end</li>
+                            <li><span>2023-2025</span><br> back-end</li>
+                            <li><span>2023-2025</span><br>database</li>
+                            <li><span>2023-2025</span><br>jspiders</li>
+                        </ul> -->
+                        <p>
+                           Cuurently Iam working as a Python full stack developer in stellapps private ltd which is located in the Bengaluru
+                        </p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016-2017</span><br>I done my SSLC in the school of Neharu Kennady Padhavi Purva school Byrakur</li>
+                            <li><span>2017-2019</span><br>In Hariyana </li>
+                            <li><span>2019-2023</span><br>I done My B.Tech in Indian Institute of Integrated Science Technology and Reaserch (IIISTR) Chennai </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>WebTech's</h2>
+                    <p>Hey! 👋 I'm a frontend maestro who breathes life into pixel,
+                        HTML, CSS, JavaScript – my toolkit for crafting sleek, responsive, and user-friendly interfaces.
+                        Iam obsessed with creating visually stunning and functional websites that users love.
+                        <br><b class="ptext">Let's turn your ideas into digital masterpieces! 💻</b>
+                    </p>
+                    <a href="https://www.cdw.com/content/cdw/en/articles/software/top-10-free-web-development-resources.html">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <p>
+                        I'm a Python enthusiast who turns code into solutions,
+                        Proficient in Python, I bring ideas to life through clean and efficient code,
+                        I love coding elegant and effective solutions, turning complexity into simplicity,
+                       <br><b class="ptext"> Poised to turn your concepts into reality! ✨</b>
+                    </p>
+                    <a href="https://realpython.com/">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>                    
+                    <h2>Database</h2>
+                    <p>
+                        I'm a coding aficionado with a flair for databases,
+                        Proficient in MariaDB, Oracle SQL, and MySQL, I design robust data structures for seamless applications,
+                        I thrive on transforming data into insights and creating efficient database architectures,
+                        <br><b class="ptext">Ready to elevate your data game! 🛢️</b>
+                    </p>
+                    <a href="https://www.hostgator.com/help/article/how-to-copy-a-database-in-phpmyadmin">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1> 
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="./img/wrk1.jpg" alt="error">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            I've crafted seamless online shopping experiences, combining functionality with an eye for aesthetics.
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./img/wrk2.jpg" alt="error">
+                    <div class="layer">
+                        <h3>personal websites</h3>
+                        <p>
+                            From social connections to e-commerce ventures and personal brands, I'm passionate about transforming ideas into digital reality.
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./img/wrk3.jpg" alt="error">
+                    <div class="layer">
+                        <h3>Shopping App</h3>
+                        <p>
+                            I've developed a range of dynamic shopping websites, each tailored to unique brands and products.
+                            Let's collaborate to create a standout digital storefront for your brand! 🌐🛒
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> 
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>shreesvshilpa@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7204909942</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/shilpa-shree/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/shilpashree123/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.me./qr/67ZB3FBDKS31C1/"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/amm_usv/"><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
+                    <a href="./img/my-Resume (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="email" placeholder="Your Mail-Address">
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <!-- <button type="submit" class="btn btn2">Submit</button> -->
+                        <input type="submit" class="btn btn2">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Shilpashree <i class="fa-solid fa-heart"></i></p>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents  = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemen = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemen.style.right="0"
+        }
+        function closemenu(){
+            sidemen.style.right="-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/a/macros/stellapps.com/s/AKfycbzOySHyJp9SZXAFXSaiZDvsDT_nOI-tQDCGZphLeuzyBGGqpSx5jy1QZThGYKgUWAM/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+       <!-- <script>
+        const title = document.querySelector('h1');
+    
+        title.addEventListener('mouseover', () => {
+          document.body.style.overflow = 'auto';
+        });
+    
+        title.addEventListener('mouseout', () => {
+          document.body.style.overflow = 'hidden';
+        });
+      </script> -->
+      
+</body>
+</html> 
