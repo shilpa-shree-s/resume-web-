@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> About Ammu</title>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/393af2f628.js" crossorigin="anonymous"></script>
@@ -25,7 +26,7 @@
 
             <div class="h-text">
                 <!-- <p>portfolio</p> -->
-                <h1>Hi, i'm <span>shilpa</span> shree <br>From Karnataka</h1>
+                <h1 id="typewriter"></h1>
             </div>
         </div>
     </div>
@@ -172,23 +173,24 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i>shreesvshilpa@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>7204909942</p>
+                    <p><i class="fa-solid fa-phone"></i>72*******2</p>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/shilpa-shree/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/shilpa-shree-35631a207/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/shilpashree123/"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://wa.me./qr/67ZB3FBDKS31C1/"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/amm_usv/"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://https://twitter.com/@shreesv1/"><i class="fa-brands fa-square-twitter"></i></a>
                     </div>
                     <a href="./img/my-Resume (1).pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="Email" name="email" placeholder="Your Mail-Address">
+                        <input type="Email" name="Email" placeholder="Your Mail-Address">
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <!-- <button type="submit" class="btn btn2">Submit</button> -->
                         <input type="submit" class="btn btn2">
                     </form>
+                    <div id="msg"></div>
                 </div>
             </div>
         </div>
@@ -220,18 +222,7 @@
         function closemenu(){
             sidemen.style.right="-200px"
         }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/a/macros/stellapps.com/s/AKfycbzOySHyJp9SZXAFXSaiZDvsDT_nOI-tQDCGZphLeuzyBGGqpSx5jy1QZThGYKgUWAM/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    </script>      
        <!-- <script>
         const title = document.querySelector('h1');
     
@@ -243,6 +234,66 @@
           document.body.style.overflow = 'hidden';
         });
       </script> -->
+      <script>
+        function typeWriter(text, i, interval) {
+            if (i < text.length) {
+                if (text.charAt(i) === ",") {
+                    document.getElementById("typewriter").innerHTML += "<span style='color: rgb(255, 0, 79);'>" + text.charAt(i) + "</span>";
+                } else if (text.substring(i, i + 6) === "Shilpa") {
+                    var word = text.substring(i, i + 6); 
+                    for (let j = 0; j < word.length; j++) {
+                        var color = interpolateColor(j / (word.length - 1), [255, 0, 79], [0, 0, 255]);
+                        document.getElementById("typewriter").innerHTML += "<span style='color: rgb(" + color.join(",") + ");'>" + word.charAt(j) + "</span>";
+                    }
+                    i += 5; 
+                } else {
+                    document.getElementById("typewriter").innerHTML += text.charAt(i);
+                }
+                i++;
+                setTimeout(function() {
+                    typeWriter(text, i, interval);
+                }, interval);
+            } else {
+                setTimeout(function() {
+                    document.getElementById("typewriter").innerHTML = "";
+                    typeWriter(text, 0, interval); 
+                }, 1000); 
+            }
+        }
+    
+        function interpolateColor(factor, colorStart, colorEnd) {
+            var result = [];
+            for (var i = 0; i < 3; i++) {
+                result.push(Math.round(colorStart[i] + factor * (colorEnd[i] - colorStart[i])));
+            }
+            return result;
+        }
+        var textToType = " Hey, I'm Shilpa Shree";
+    
+        typeWriter(textToType, 0, 100);
+    </script>    
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwryVLvz5mqMnMjc9-LB8Bt-UBY658oj23g_vjeANoA7fIVAOBRr-dH3zYZozqFsbU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg'); // Reference to the message div
+          
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    msg.innerHTML = "An error occurred. Please try again later.";
+                });
+        });
+    </script>
+    
       
 </body>
 </html> 

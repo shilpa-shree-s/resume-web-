@@ -61,6 +61,7 @@ nav ul li a:hover::after{
 .h-text h1{
     font-size: 60px;
     margin-top: 20px;
+    overflow-wrap: break-word;
 }
 .h-text h1 span{
     color:#ff004f;
@@ -114,6 +115,7 @@ nav ul li a:hover::after{
 }
 .tab-links.active-link::after{
     width: 50%;
+    color: #ff004f;
 }
 .tab-contents ul li{
     list-style: none;
@@ -316,18 +318,25 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
-
+.fa-circle-xmark,
+.fa-bars {
+    display: none !important;
+}
 /* css for small screen */
 @media only screen and (max-width:600px){
+    .logo {
+        display: none;
+    }
     #header{
-        background-image: url(./img/my\ pic\ small.png);
+        background-image: url(./img/ai.jpg);
     }
     .h-text{
-        margin-top: 100%;
+        margin-top: 95%;
         font-size: 16px;
     }
     .h-text h1{
-        font-size: 30px;
+        font-size: 70px;
+        overflow-wrap: break-word;
     }
     nav .fas{
         display: block;
@@ -373,6 +382,7 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+   
 }
 #msz{
     color: #61b752;
