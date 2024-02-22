@@ -4,7 +4,7 @@ def get_pay_ref_no(doc, method=None):
             mooretail_order_uuid = doc.doc.mooretail_order_uuid  
             related_docs = frappe.get_all(doc.doctype, filters={'mooretail_order_uuid': mooretail_order_uuid})
             for related_doc in related_docs:
-                for reference in doc.references:
+                for reference in doc.referinces:
                     reference_name = reference.reference_name
                     reference_type = reference.reference_doctype
                     ref_doc = frappe.get_doc(reference_type, reference_name)
